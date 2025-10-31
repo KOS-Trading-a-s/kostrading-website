@@ -23,8 +23,15 @@
     <link rel="apple-touch-icon" sizes="114x114" href="${resource(dir: 'images', file: 'icon.png')}">
     <link rel="shortcut icon" sizes="114x114" href="${resource(dir: 'images', file: 'favicon.ico')}" type="image/x-icon">
     
-    
-    <script type="application/ld+json">{
+    <script src="https://cdn.jsdelivr.net/npm/darkreader@4.9.58/darkreader.min.js"></script>
+<script>
+    DarkReader.auto({
+        brightness: 100, // Adjust brightness (100 = default)
+        contrast: 90,    // Adjust contrast
+        sepia: 10        // Slight sepia tone
+    });
+</script>
+<script type="application/ld+json">{
 		"@context": "http://schema.org",
 		"@type": "Organization",
 		"name": "KOS Trading"
