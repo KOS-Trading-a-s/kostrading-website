@@ -7,6 +7,7 @@
     <title>Vozy-Kontakty</title>
     <link rel="stylesheet" href="nicepage.css" media="screen">
 <link rel="stylesheet" href="Vozy-Kontakty.css" media="screen">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.css">
     <script class="u-script" type="text/javascript" src="jquery.js" defer=""></script>
     <script class="u-script" type="text/javascript" src="nicepage.js" defer=""></script>
     <meta name="generator" content="Nicepage 5.21.3, nicepage.com">
@@ -124,7 +125,7 @@
                     <div class="u-container-layout u-container-layout-3">
                       <div class="u-absolute-hcenter u-expanded u-grey-10 u-map u-map-1" data-animation-name="customAnimationIn" data-animation-duration="1000">
                         <div class="embed-responsive">
-                          <iframe class="embed-responsive-item" src="https://maps.google.com/maps?output=embed&amp;q=%C4%8Cesk%C3%A1%20republika%2C%20Krnov%2C%20KOS%20Trading%2C%20a.%20s.&amp;t=m" data-map="JTdCJTIycG9zaXRpb25UeXBlJTIyJTNBJTIybWFwLWFkZHJlc3MlMjIlMkMlMjJhZGRyZXNzJTIyJTNBJTIyJUM0JThDZXNrJUMzJUExJTIwcmVwdWJsaWthJTJDJTIwS3Jub3YlMkMlMjBLT1MlMjBUcmFkaW5nJTJDJTIwYS4lMjBzLiUyMiUyQyUyMnpvb20lMjIlM0ElMjIlMjIlMkMlMjJ0eXBlSWQlMjIlM0ElMjJyb2FkJTIyJTJDJTIybGFuZyUyMiUzQW51bGwlMkMlMjJhcGlLZXklMjIlM0FudWxsJTJDJTIybWFya2VycyUyMiUzQSU1QiU1RCU3RA=="></iframe>
+                          <div class="embed-responsive-item" id="kos-map"></div>
                         </div>
                       </div>
                     </div>
@@ -327,7 +328,7 @@
               <p class="u-align-center u-custom-item u-text u-text-1" data-lang-cs="Sample text. Click to select the Text Element.">
                 <span style="font-weight: 700;"> KOS Trading, a.s.,&nbsp;</span>
                 <br>
-                <a href="https://goo.gl/maps/SeHc2BiKm8PGGgPA8" class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-1-base u-btn-1">Stará Ježnická 1556/1,&nbsp;<br>Pod Bezručovým vrchem,<br>&nbsp;PSČ&nbsp;794 01, Krnov
+                <a href="https://www.openstreetmap.org/?mlat=50.0960475https://goo.gl/maps/SeHc2BiKm8PGGgPA8mlon=17.6815100#map=17/50.0960475/17.6815100" class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-1-base u-btn-1">Stará Ježnická 1556/1,&nbsp;<br>Pod Bezručovým vrchem,<br>&nbsp;PSČ&nbsp;794 01, Krnov
                 </a>
               </p>
             </div>
@@ -404,7 +405,32 @@
     });
   })();
   </script>
- <!-- 
+ <!--
   <a id="email-link" class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-1-base u-btn-3" data-user="kost" data-domain="kostrading.cz" href="mailto:josefhi@kostrading.cz" rel="noopener" aria-label="josefhi@kostrading.cz">josefhi@kostrading.cz</a>
    -->
+  <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script>
+    (function () {
+      function initKosMap() {
+        var el = document.getElementById('kos-map');
+        if (!el || typeof L === 'undefined' || el.dataset.init) return;
+        el.dataset.init = '1';
+        var lat = 50.0960475, lon = 17.6815100;
+        var map = L.map(el, { scrollWheelZoom: false }).setView([lat, lon], 16);
+        L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
+          subdomains: 'abcd',
+          maxZoom: 19,
+          attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> přispěvatelé &copy; <a href="https://carto.com/attributions">CARTO</a>'
+        }).addTo(map);
+        L.marker([lat, lon]).addTo(map)
+          .bindPopup('KOS Trading, a.s.<br>Stará Ježnická 1556/1, Krnov');
+        setTimeout(function () { map.invalidateSize(); }, 300);
+      }
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initKosMap);
+      } else {
+        initKosMap();
+      }
+    })();
+  </script>
 </body></html>
