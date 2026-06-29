@@ -42475,3 +42475,10 @@ a.u-link.u-text-hover-grey-90:hover {
 .u-body > section:last-of-type {
   margin-top: auto;
 }
+
+/* Fix mostly-empty box overflows over swallows clicks on the logo link */
+.u-section-1 .u-image-1,
+.u-section-1 a:has(> .u-image-1) {
+  position: relative;
+  z-index: 2;
+}
