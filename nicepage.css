@@ -42465,3 +42465,13 @@ a.u-link.u-text-hover-grey-90:hover {
  /*begin-variables base-font-size*/ 
  html { font-size: 16px; }
  /*end-variables base-font-size*/
+
+/* Sticky footer */
+.u-body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+.u-body > section:last-of-type {
+  margin-top: auto;
+}
