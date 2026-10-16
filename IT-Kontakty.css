@@ -1108,3 +1108,76 @@
     grid-template-columns: 100%;
   }
 }
+/* vycentrování karet kontaktů */
+@media (min-width: 768px) {
+  .u-section-4 .u-repeater-1 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: flex-start;
+    gap: 50px;
+    min-height: 0;
+  }
+
+  .u-section-4 .u-repeater-1 > .u-list-item {
+    flex: none;
+    width: calc(25% - 37.5px);
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+  .u-section-4 .u-repeater-1 {
+    gap: 10px;
+  }
+
+  .u-section-4 .u-repeater-1 > .u-list-item {
+    width: calc(20% - 8px);
+  }
+}
+
+/* pevné výšky řádků – stejné ve všech kartách, takže řádky jsou vedle sebe */
+@media (min-width: 768px) {
+  .u-section-4 .u-layout-cell-5,
+  .u-section-4 .u-layout-cell-9,
+  .u-section-4 .u-layout-cell-13 {
+    height: 104px;
+    min-height: 104px;
+  }
+
+  .u-section-4 .u-layout-cell-6,
+  .u-section-4 .u-layout-cell-10,
+  .u-section-4 .u-layout-cell-14 {
+    height: 110px;
+    min-height: 110px;
+  }
+
+  .u-section-4 .u-layout-cell-7,
+  .u-section-4 .u-layout-cell-11,
+  .u-section-4 .u-layout-cell-15 {
+    height: 90px;
+    min-height: 90px;
+  }
+
+  .u-section-4 .u-layout-cell-8,
+  .u-section-4 .u-layout-cell-12,
+  .u-section-4 .u-layout-cell-16 {
+    height: 90px;
+    min-height: 90px;
+  }
+
+  .u-section-4 .u-layout-cell-5 > .u-container-layout,
+  .u-section-4 .u-layout-cell-6 > .u-container-layout,
+  .u-section-4 .u-layout-cell-7 > .u-container-layout,
+  .u-section-4 .u-layout-cell-8 > .u-container-layout,
+  .u-section-4 .u-layout-cell-9 > .u-container-layout,
+  .u-section-4 .u-layout-cell-10 > .u-container-layout,
+  .u-section-4 .u-layout-cell-11 > .u-container-layout,
+  .u-section-4 .u-layout-cell-12 > .u-container-layout,
+  .u-section-4 .u-layout-cell-13 > .u-container-layout,
+  .u-section-4 .u-layout-cell-14 > .u-container-layout,
+  .u-section-4 .u-layout-cell-15 > .u-container-layout,
+  .u-section-4 .u-layout-cell-16 > .u-container-layout {
+    height: 100%;
+    justify-content: flex-start !important;
+  }
+}
