@@ -12,21 +12,6 @@
     max-width: 100%;
   }
 
-  /* hlavička: větší plochy pro prsty, menu se zalamuje do rovnoměrných řádků */
-  .u-section-1 .u-text-1 {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 0 4px;
-  }
-
-  .u-section-1 .u-text-1 a {
-    display: inline-block;
-    padding: 10px 12px;
-    font-size: 1.125rem;
-    line-height: 1.3;
-  }
-
   /* odkazy v patičce a telefonní čísla – dostatečně velké pro klepnutí */
   footer a,
   .u-footer a,

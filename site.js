@@ -58,6 +58,25 @@
     if (e.key === 'Escape') closeLightbox();
   });
 
+  // Hamburger menu na mobilu
+  var header = document.querySelector('.u-section-1');
+  var nav = header && header.querySelector('.u-text-1');
+  if (nav && nav.querySelector('a')) {
+    var row = header.querySelector('.u-layout-row');
+    var btn = document.createElement('button');
+    btn.type = 'button';
+    btn.className = 'nav-toggle';
+    btn.setAttribute('aria-label', 'Menu');
+    btn.setAttribute('aria-expanded', 'false');
+    btn.innerHTML = '<span></span><span></span><span></span>';
+    row.appendChild(btn);
+    header.classList.add('has-nav');
+    btn.addEventListener('click', function () {
+      var open = header.classList.toggle('nav-open');
+      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+  }
+
   // Tlačítko "nahoru"
   var up = document.querySelector('.u-back-to-top');
   if (up) {

@@ -5873,3 +5873,126 @@ a.u-button-style.u-button-style.u-text-grey-90[class*="u-border-"].active {
   object-fit: contain;
   border-radius: 8px;
 }
+
+/* hamburger menu (mobil) */
+.nav-toggle {
+  display: none;
+}
+
+@media (max-width: 767px) {
+  .u-section-1.has-nav .u-layout-row {
+    display: grid;
+    grid-template-columns: 1fr auto auto;
+    align-items: center;
+    column-gap: 12px;
+    padding: 8px 16px;
+  }
+
+  .u-section-1.has-nav {
+    min-height: 0;
+  }
+
+  .u-section-1.has-nav .u-layout-cell {
+    width: auto;
+    min-height: 0;
+  }
+
+  .u-section-1.has-nav .u-layout-cell-1 {
+    grid-column: 1;
+    grid-row: 1;
+    text-align: left;
+  }
+
+  .u-section-1.has-nav .u-layout-cell-1 .u-container-layout,
+  .u-section-1.has-nav .u-layout-cell-3 .u-container-layout {
+    padding: 0;
+  }
+
+  .u-section-1.has-nav .u-image-1 {
+    margin: 0;
+    display: block;
+  }
+
+  .u-section-1.has-nav .u-layout-cell-3 {
+    grid-column: 2;
+    grid-row: 1;
+  }
+
+  .u-section-1.has-nav .u-layout-cell-3 .u-social-icons {
+    margin: 0;
+    height: auto;
+  }
+
+  .u-section-1.has-nav .nav-toggle {
+    grid-column: 3;
+    grid-row: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    width: 44px;
+    height: 44px;
+    padding: 10px;
+    border: 0;
+    border-radius: 8px;
+    background: transparent;
+    cursor: pointer;
+  }
+
+  .nav-toggle span {
+    display: block;
+    height: 3px;
+    border-radius: 2px;
+    background: #111;
+    transition: transform 0.2s, opacity 0.2s;
+  }
+
+  .nav-open .nav-toggle span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  .nav-open .nav-toggle span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .nav-open .nav-toggle span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
+  .u-section-1.has-nav .u-layout-cell-2 {
+    display: none;
+    grid-column: 1 / -1;
+    grid-row: 2;
+    margin-top: 8px;
+  }
+
+  .u-section-1.has-nav.nav-open .u-layout-cell-2 {
+    display: block;
+  }
+
+  .u-section-1.has-nav .u-layout-cell-2 .u-container-layout {
+    padding: 0;
+  }
+
+  .u-section-1.has-nav .u-text-1 {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    font-size: 0;
+    line-height: 1.3;
+    text-align: left;
+  }
+
+  .u-section-1.has-nav .u-text-1 a {
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    margin: 0;
+    padding: 14px 4px;
+    line-height: 1.3;
+    border: 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.12);
+    font-size: 1.125rem;
+    text-align: left;
+  }
+}
