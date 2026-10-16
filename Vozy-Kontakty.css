@@ -1197,3 +1197,87 @@
     justify-content: flex-start !important;
   }
 }
+
+/* mobil: kompaktní karty kontaktů */
+@media (max-width: 767px) {
+  .u-section-4 .u-repeater-1 {
+    min-height: 0;
+    grid-gap: 16px;
+  }
+
+  .u-section-4 .u-list-1 {
+    width: auto;
+    margin: 24px 0;
+  }
+
+  .u-section-4 .u-layout-cell {
+    min-height: 0 !important;
+  }
+
+  .u-section-4 .u-layout-cell > .u-container-layout {
+    padding: 8px 16px;
+  }
+
+  .u-section-4 .u-layout-cell:first-child > .u-container-layout {
+    padding-top: 20px;
+  }
+
+  .u-section-4 .u-layout-cell:last-child > .u-container-layout {
+    padding-bottom: 20px;
+  }
+
+  .u-section-4 .u-text {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  .u-section-4 .u-btn-7,
+  .u-section-4 .u-btn-73 {
+    display: inline-block;
+    padding: 8px 4px;
+    font-size: 1.125rem;
+  }
+}
+
+/* mobil: bez zbytečného prázdného místa, mapa vycentrovaná */
+@media (max-width: 767px) {
+  .u-section-3 .u-sheet-1,
+  .u-section-4 .u-sheet-1 {
+    min-height: 0 !important;
+  }
+
+  .u-section-3 .u-layout-wrap-1 {
+    width: auto !important;
+    max-width: 100%;
+    margin: 24px 0 !important;
+  }
+
+  .u-section-3 .u-layout-cell-1,
+  .u-section-3 .u-layout-cell-2 {
+    min-height: 0 !important;
+  }
+
+  .u-section-3 .u-group-elements-1 {
+    width: 100% !important;
+    max-width: 100%;
+  }
+
+  .u-section-3 .u-layout-cell-2 .u-group-1 {
+    width: 100%;
+    min-height: 320px;
+    height: 320px;
+    margin: 16px 0 0 !important;
+  }
+
+  .u-section-3 .u-map-1,
+  .u-section-3 .u-map-1 .embed-responsive,
+  #kos-map {
+    min-height: 320px;
+    height: 320px;
+    left: 0 !important;
+    right: 0 !important;
+    margin: 0 !important;
+    width: 100%;
+    transform: none !important;
+  }
+}
