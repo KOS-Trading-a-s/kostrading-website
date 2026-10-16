@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://kostrading.cz/sitemap.xml
