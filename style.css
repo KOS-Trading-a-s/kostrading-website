@@ -1914,7 +1914,7 @@ p {
   position: relative;
 }
 .u-font-titillium-web.u-custom-font {
-  font-family: 'Titillium Web', sans-serif !important;
+  font-family: 'Titillium Web', system-ui, 'Segoe UI', Arial, sans-serif !important;
 }
 .u-container-style.u-hover-feature,
 .u-container-style.u-hover-feature:before {
@@ -5006,7 +5006,7 @@ a.u-button-style.u-border-4 {
 }
 
 .u-body {
-  font-family: 'Open Sans',sans-serif;
+  font-family: 'Open Sans', system-ui, 'Segoe UI', Arial, sans-serif;
 }
 h1,
 h2,
@@ -5014,7 +5014,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: Roboto,sans-serif;
+  font-family: Roboto, system-ui, 'Segoe UI', Arial, sans-serif;
 }
 
 .u-overlap.u-overlap-transparent .u-header,
@@ -5032,10 +5032,10 @@ h6 {
 }
 
 .u-custom-font.u-text-font {
-  font-family: 'Open Sans',sans-serif !important;
+  font-family: 'Open Sans', system-ui, 'Segoe UI', Arial, sans-serif !important;
 }
 .u-custom-font.u-heading-font {
-  font-family: Roboto,sans-serif !important;
+  font-family: Roboto, system-ui, 'Segoe UI', Arial, sans-serif !important;
 }
 
 .u-none.u-input,
@@ -5534,7 +5534,7 @@ a.u-button-style.u-button-style.u-text-grey-90[class*="u-border-"].active {
         line-height: 1.6;
         list-icon-spacing: 0.3;
         list-icon-size: 0.8;
-        font-family: 'Titillium Web',sans-serif;
+        font-family: 'Titillium Web', system-ui, 'Segoe UI', Arial, sans-serif;
         }
         a
         {
