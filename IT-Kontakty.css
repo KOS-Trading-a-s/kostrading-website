@@ -1265,3 +1265,11 @@
     transform: none !important;
   }
 }
+
+/* mapa se stejně zaoblenými rohy jako karty */
+.u-section-3 .u-group-1,
+.u-section-3 .u-map-1,
+#kos-map {
+  border-radius: 20px;
+  overflow: hidden;
+}
