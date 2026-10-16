@@ -5996,3 +5996,106 @@ a.u-button-style.u-button-style.u-text-grey-90[class*="u-border-"].active {
     text-align: left;
   }
 }
+
+/* tmavý režim (podle nastavení systému) */
+@media (prefers-color-scheme: dark) {
+  :root {
+    color-scheme: dark;
+  }
+
+  .u-body {
+    color: #dbd5cc;
+    background-color: #181a1b;
+    background-image: none;
+  }
+
+  .u-white,
+  .u-white > .u-container-layout:before {
+    color: #dbd5cc;
+    background-color: #242525;
+  }
+
+  .u-grey-10,
+  section.u-grey-10:before {
+    color: #dbd5cc;
+    background-color: #181a1b;
+  }
+
+  .u-grey-15,
+  section.u-grey-15:before {
+    color: #dbd5cc;
+    background-color: #373a3a;
+  }
+
+  .u-text-body-color,
+  a.u-button-style.u-text-body-color,
+  a.u-button-style.u-text-body-color[class*="u-border-"] {
+    color: #dbd5cc !important;
+  }
+
+  .u-text-palette-1-base,
+  a.u-button-style.u-text-palette-1-base,
+  a.u-button-style.u-text-palette-1-base[class*="u-border-"],
+  .u-btn-7,
+  .u-btn-73 {
+    color: #6598bf !important;
+  }
+
+  p:not(.u-text-variant),
+  .u-image:not(.u-shading) > .u-container-layout > p:not(.u-text-variant) {
+    color: #dbd5cc;
+  }
+
+  a,
+  .u-image:not(.u-shading) > .u-container-layout > a {
+    color: #6598bf;
+  }
+
+  a:hover {
+    color: #8db8e0;
+  }
+
+  /* hover / focus / active – text zůstává světlý */
+  a.u-button-style.u-button-style.u-text-body-color:is(:hover, :focus, :active, .active),
+  a.u-button-style.u-button-style.u-text-body-color[class*="u-border-"]:is(:hover, :focus, :active, .active) {
+    color: #fff !important;
+  }
+
+  a.u-button-style.u-button-style.u-text-palette-1-base:is(:hover, :focus, :active, .active),
+  a.u-button-style.u-button-style.u-text-palette-1-base[class*="u-border-"]:is(:hover, :focus, :active, .active) {
+    color: #8db8e0 !important;
+  }
+
+  .u-text-grey-90,
+  .u-text-black {
+    color: #e5e0d8 !important;
+  }
+
+  .u-social-facebook,
+  .u-social-icons .u-icon {
+    color: #87a4c0 !important;
+  }
+
+  /* tmavé ikony na světlém pozadí */
+  img[src$="icon-cursor-black.png"] {
+    filter: invert(1);
+  }
+
+  /* hamburger menu */
+  .nav-toggle span {
+    background: #dbd5cc;
+  }
+
+  .u-section-1.has-nav .u-text-1 a {
+    border-top-color: rgba(255, 255, 255, 0.18);
+  }
+
+  /* mapa a rámečky */
+  .leaflet-container {
+    filter: brightness(0.8) contrast(1.1);
+  }
+
+  .u-gallery-nav {
+    background-color: rgba(60, 60, 60, 0.85);
+  }
+}
