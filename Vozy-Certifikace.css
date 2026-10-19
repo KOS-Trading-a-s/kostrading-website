@@ -409,3 +409,35 @@
     grid-template-columns: 100%;
   }
 }
+/* flexibilní mřížka certifikátů */
+.u-section-2 .u-gallery-1 {
+  height: auto;
+}
+
+.u-section-2 .u-gallery-inner-1 {
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 380px), 520px));
+  justify-content: center;
+  align-items: start;
+  grid-gap: 24px;
+}
+
+.u-section-2 .u-gallery-item .u-back-slide {
+  height: auto;
+}
+
+.u-section-2 .u-gallery-item .u-back-image {
+  position: static !important;
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.u-section-2 .u-sheet-1 {
+  min-height: 0;
+}
+
+.u-section-2 .u-gallery-1 {
+  width: 100%;
+  max-width: 1140px;
+  margin: 40px auto 60px;
+}

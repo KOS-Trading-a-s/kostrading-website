@@ -42,6 +42,7 @@
     if (lightbox) { lightbox.remove(); lightbox = null; }
   }
   document.querySelectorAll('.u-lightbox .u-gallery-item img').forEach(function (img) {
+    if (img.closest('a')) return;
     img.addEventListener('click', function () {
       closeLightbox();
       lightbox = document.createElement('div');
